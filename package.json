@@ -12,11 +12,14 @@
   "peerDependencies": {
     "react": "^18.2.0"
   },
-  "repository": "git@github.com:andrewtsarow/use-server-action.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewtsarow/use-server-action.git"
+  },
   "scripts": {
     "build": "tsc",
     "prepublish": "tsc"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.4"
+  "version": "1.0.5"
 }
