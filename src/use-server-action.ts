@@ -20,6 +20,8 @@ export function useServerAction<T extends (...args: any) => Promise<any>>(action
     } finally {
       setLoading(false)
     }
+
+    return data
   }
 
   return { data, error, execute, loading }
