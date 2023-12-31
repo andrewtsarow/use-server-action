@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "commonjs",
+    "outDir": "./dist",
+    "target": "es5"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

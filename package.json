@@ -1,0 +1,22 @@
+{
+  "author": "Andrew Tsarow <andrew.tsarow@gmail.com>",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "/dist/**/*.js"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "use-server-action",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "repository": "git@github.com:andrewtsarow/use-server-action.git",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "types": "dist/index.d.ts",
+  "version": "1.0.0"
+}
