@@ -3,13 +3,13 @@ import { useState } from "react"
 import { serializeError } from "./serialize-error"
 
 export function useServerAction<T extends (...args: any) => any>(action: T) {
-  const [data, setData] = useState<Awaited<ReturnType<T>>>()
-  const [error, setError] = useState<Error>()
+  const [data, setData] = useState<Awaited<ReturnType<T>> | null>(null)
+  const [error, setError] = useState<Error | null>(null)
   const [loading, setLoading] = useState(false)
 
-  async function execute(...args: Parameters<T>): Promise<Awaited<ReturnType<T>>> {
-    setData(undefined)
-    setError(undefined)
+  async function execute(...args: Parameters<T>): Promise<Awaited<ReturnType<T>> | null> {
+    setData(null)
+    setError(null)
     setLoading(true)
 
     try {

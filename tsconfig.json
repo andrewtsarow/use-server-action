@@ -9,6 +9,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "outDir": "./dist",
+    "strictNullChecks": true,
     "target": "es5"
   },
   "include": [
