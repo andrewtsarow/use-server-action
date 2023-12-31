@@ -4,7 +4,7 @@
     "typescript": "^5.3.3"
   },
   "files": [
-    "/dist/**/*.js"
+    "/dist/**/*"
   ],
   "license": "MIT",
   "main": "dist/index.js",
@@ -18,5 +18,5 @@
     "prepublish": "tsc"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
