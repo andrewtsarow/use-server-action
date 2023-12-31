@@ -6,7 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "node",
     "outDir": "./dist",
     "target": "es5"
   },

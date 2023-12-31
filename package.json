@@ -1,6 +1,8 @@
 {
   "author": "Andrew Tsarow <andrew.tsarow@gmail.com>",
   "devDependencies": {
+    "@types/react": "18",
+    "react": "18",
     "typescript": "^5.3.3"
   },
   "files": [
@@ -10,7 +12,7 @@
   "main": "dist/index.js",
   "name": "use-server-action",
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "18"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,5 @@
     "prepublish": "tsc"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.6"
+  "version": "1.1.0"
 }
