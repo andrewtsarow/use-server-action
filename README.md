@@ -66,7 +66,7 @@ import { createPost } from "./actions"
 export function MyComponent() {
   const { data, error, execute: createPost, loading } = useServerAction(createPost)
 
-  function handleButtonClick () {
+  function handleButtonClick() {
     // Trigger the execution of the Server Action.
     createPost("The best post title!")
   }
