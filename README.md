@@ -17,33 +17,6 @@ yarn add use-server-action
 ## Usage
 
 ```typescript
-import { useServerAction } from "use-server-action"
-
-export function MyComponent() {
-  const { data, error, execute: createPost, loading } = useServerAction(createPost)
-
-  // Use loading, data, and error states in your component.
-
-  return (
-    // Your component JSX.
-  )
-}
-```
-
-## API
-
-### `useServerAction(action: () => Promise<any>)`
-
-The hook takes a Server Action function as its argument and returns an object with the following properties:
-
-- **`data`**: The data returned by the Server Action.
-- **`error`**: Any error that occurred during the execution of the Server Action.
-- **`execute`**: A function to trigger the execution of the Server Action.
-- **`loading`**: A boolean indicating whether the Server Action is currently loading.
-
-## Example
-
-```typescript
 // actions.ts
 
 "use server"
@@ -61,10 +34,10 @@ export async function createPost(title: string) {
 ```typescript
 import { useServerAction } from "use-server-action"
 
-import { createPost } from "./actions"
+import * as actions from "./actions"
 
 export function MyComponent() {
-  const { data, error, execute: createPost, loading } = useServerAction(createPost)
+  const { data, error, execute: createPost, loading } = useServerAction(actions.createPost)
 
   function handleButtonClick() {
     // Trigger the execution of the Server Action.
@@ -82,6 +55,17 @@ export function MyComponent() {
   )
 }
 ```
+
+## API
+
+### `useServerAction(action: () => Promise<any>)`
+
+The hook takes a Server Action function as its argument and returns an object with the following properties:
+
+- **`data`**: The data returned by the Server Action.
+- **`error`**: Any error that occurred during the execution of the Server Action.
+- **`execute`**: A function to trigger the execution of the Server Action.
+- **`loading`**: A boolean indicating whether the Server Action is currently loading.
 
 ## Contributing
 
